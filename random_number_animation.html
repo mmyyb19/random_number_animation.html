@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #numberDisplay {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="numberDisplay"></div>
+
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function updateNumber() {
+            const numberDisplay = document.getElementById('numberDisplay');
+            numberDisplay.textContent = getRandomNumber(1, 70);
+        }
+
+        setInterval(updateNumber, 100); // Update every 100 milliseconds
+    </script>
+</body>
+</html>
+
+
+
